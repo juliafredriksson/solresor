@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solresor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Solresor</h1>
+    <nav>
+      <ul>
+        <li><a href="#destinations">Resmål</a></li>
+        <li><a href="#about">Om Oss</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Upptäck din drömsemester i solen!</h2>
+    <button id="showMoreBtn">Visa mer</button>
+    <p id="extraInfo" class="hidden">Vi erbjuder resor till exotiska platser världen över – från Karibiens stränder till Thailands paradisöar.</p>
+  </section>
+
+  <section id="destinations" class="cards">
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?beach" alt="Strand" />
+      <h3>Maldiverna</h3>
+      <p>Kristallklart vatten och vita stränder.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?tropical" alt="Tropiskt" />
+      <h3>Thailand</h3>
+      <p>Vackra öar och fantastisk mat.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?sunset,beach" alt="Solnedgång" />
+      <h3>Grekland</h3>
+      <p>Historik, mat och stränder i världsklass.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>Om Oss</h2>
+    <p>Vi är experter på solresor och har hjälpt tusentals att hitta sitt drömresmål. Med oss reser du tryggt och bekvämt.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Kontakta Oss</h2>
+    <form>
+      <label for="name">Namn:</label>
+      <input type="text" id="name" required />
+      
+      <label for="email">E-post:</label>
+      <input type="email" id="email" required />
+      
+      <label for="message">Meddelande:</label>
+      <textarea id="message" rows="4" required></textarea>
+      
+      <button type="submit">Skicka</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Solresor AB</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
