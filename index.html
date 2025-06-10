@@ -1,70 +1,56 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Solresor</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soliga Resor</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Solresor</h1>
-    <nav>
-      <ul>
-        <li><a href="#destinations">Resmål</a></li>
-        <li><a href="#about">Om Oss</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-      </ul>
-    </nav>
-  </header>
-
   <section class="hero">
-    <h2>Upptäck din drömsemester i solen!</h2>
-    <button id="showMoreBtn">Visa mer</button>
-    <p id="extraInfo" class="hidden">Vi erbjuder resor till exotiska platser världen över – från Karibiens stränder till Thailands paradisöar.</p>
+    <h2>Res dit solen skiner!</h2>
+    <p>Upptäck våra soliga paradis – boka din drömresa idag.</p>
+    <a href="#resor" class="cta-button">Utforska Resmål</a>
   </section>
 
-  <section id="destinations" class="cards">
-    <div class="card">
-      <img src="https://source.unsplash.com/400x300/?beach" alt="Strand" />
-      <h3>Maldiverna</h3>
-      <p>Kristallklart vatten och vita stränder.</p>
-    </div>
-    <div class="card">
-      <img src="https://source.unsplash.com/400x300/?tropical" alt="Tropiskt" />
-      <h3>Thailand</h3>
-      <p>Vackra öar och fantastisk mat.</p>
-    </div>
-    <div class="card">
-      <img src="https://source.unsplash.com/400x300/?sunset,beach" alt="Solnedgång" />
-      <h3>Grekland</h3>
-      <p>Historik, mat och stränder i världsklass.</p>
+  <section id="resor" class="cards-section">
+    <h2>Populära Resmål</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="hawaii.webp" alt="Maldiverna">
+        <h3>Maldiverna</h3>
+        <p>Drömlika öar och kristallklart vatten.</p>
+      </div>
+      <div class="card">
+        <img src="spanien.webp" alt="Spanien">
+        <h3>Spanien</h3>
+        <p>Sol, tapas och medelhavskultur.</p>
+      </div>
+      <div class="card">
+        <img src="grekland.webp" alt="Grekland">
+        <h3>Grekland</h3>
+        <p>Historiska öar och azurblå hav.</p>
+      </div>
     </div>
   </section>
 
-  <section id="about">
-    <h2>Om Oss</h2>
-    <p>Vi är experter på solresor och har hjälpt tusentals att hitta sitt drömresmål. Med oss reser du tryggt och bekvämt.</p>
+  <section id="erbjudanden">
+    <h2>Veckans Erbjudanden</h2>
+    <p>Just nu: 20% rabatt på resor till Medelhavet!</p>
   </section>
 
-  <section id="contact">
+  <section id="kontakt">
     <h2>Kontakta Oss</h2>
     <form>
-      <label for="name">Namn:</label>
-      <input type="text" id="name" required />
-      
-      <label for="email">E-post:</label>
-      <input type="email" id="email" required />
-      
-      <label for="message">Meddelande:</label>
-      <textarea id="message" rows="4" required></textarea>
-      
+      <input type="text" placeholder="Ditt namn" required>
+      <input type="email" placeholder="Din e-post" required>
+      <textarea placeholder="Ditt meddelande" rows="4" required></textarea>
       <button type="submit">Skicka</button>
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Solresor AB</p>
+    <p>&copy; 2025 Soliga Resor AB</p>
   </footer>
 
   <script src="script.js"></script>
