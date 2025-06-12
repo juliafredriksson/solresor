@@ -1,167 +1,302 @@
 :root {
-  --sun-yellow: #ffe87c;
-  --sky-blue: #a6e1fa;
-  --soft-white: #fffef5;
-  --peach: #ffcab1;
-  --text: #333;
-  --accent: #ff8c42;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--soft-white);
-  color: var(--text);
-  line-height: 1.6;
-}
-
-header {
-  background: var(--sun-yellow);
-  padding: 20px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2rem;
-  color: #222;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  list-style: none;
-  margin-top: 10px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-.hero {
-  background: linear-gradient(to right, var(--sky-blue), var(--peach));
-  text-align: center;
-  padding: 60px 20px;
-  color: #333;
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.cta-button {
-  background: var(--accent);
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 25px;
-  font-size: 1rem;
-  text-decoration: none;
-}
-
-.cards-section {
-  padding: 40px 20px;
-  text-align: center;
-  background: #f6fbff;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  width: 300px;
-  overflow: hidden;
-  text-align: center;
-}
-
-.card img {
+  .main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-}
-
-.card h3 {
-  margin-top: 10px;
-  font-size: 1.2rem;
-}
-
-.card p {
-  padding: 10px;
-  font-size: 0.95rem;
-}
-
-#erbjudanden {
-  background: var(--peach);
-  padding: 30px 20px;
+  background-color: #ffeaf0;
+  padding: 2rem 0;
   text-align: center;
-  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 15;
 }
 
-#kontakt {
-  background: #fff;
-  padding: 40px 20px;
-  text-align: center;
+.main-header h1 {
+  margin: 0;
+  margin-top: 100px
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #cc0044;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+  /* --- Cykelkalender --- */
+.cycle-settings {
+  position: absolute;
+  top: 180px;
+  left: 20px;
+  background-color: #fff5f8;
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 240px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: auto;
-  gap: 15px;
+.cycle-settings h2 {
+  margin-bottom: 0.5rem;
+  color: #b3003c;
 }
 
-input, textarea {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 1rem;
+.cycle-settings label {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
 }
 
-button {
-  background: var(--accent);
+.cycle-settings input {
+  padding: 0.4rem;
+  margin-top: 0.25rem;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+.cycle-settings button {
+  margin-top: 0.8rem;
+  padding: 0.5rem;
+  background-color: #e6004c;
   color: white;
   border: none;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 1rem;
+  border-radius: 6px;
   cursor: pointer;
-}
-
-button:hover {
-  background: #e67c2f;
-}
-
-footer {
-  background: var(--sun-yellow);
-  text-align: center;
-  padding: 20px;
   font-weight: bold;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+
+.cycle-settings button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #e6004c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cycle-settings button:hover {
+  background-color: #c4003c;
+}
+
+/* --- Subtila bloddroppar i bakgrunden --- */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(255, 0, 76, 0.05) 3px, transparent 3px);
+  background-size: 50px 50px;
+  z-index: -1;
+}
+
+    --body-bg-color: #ffe0e6; /* Ljusrosa bakgrund */
+    --primary-red: #e63946;
+    --primary-pink: #ff6b81;
+    --dark-text-color: #990000; /* Mörk röd textfärg för allmän text */
+    --darker-pink-heading: #c70039; /* Rubriker och viktiga element */
+    --handle-color: #a00000; /* Mörkare röd/rosa för draghandtaget */
+    --handle-border-color: #ffdde1; /* Ljusare kant för handtaget */
+    --rec-bg-color: #ffdde1; /* Bakgrund för rekommendationsrutor */
+    --rec-border-color: #ff91a4; /* Kantlinje för rekommendationsrutor */
+    --rec-heading-color: #a00037; /* Rubrik i rekommendationsrutor */
+    --rec-text-color: #5d001e; /* Text i rekommendationsrutor */
+ 
+    /* Variabler för cirkelns design */
+    --outer-circle-size-factor: 0.8; /* Styr hur stor cirkeln är relativt till viewport */
+    --inner-circle-size-factor: 0.5; /* För att behålla en BRED donut */
+    --track-line-thickness: 5px; /* Tjocklek på den vita linjen */
+}
+ 
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif, sans-serif; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--body-bg-color);
+    color: var(--dark-text-color);
+}
+ 
+.circle-container {
+    width: calc(var(--outer-circle-size-factor) * 100vmin);
+    height: calc(var(--outer-circle-size-factor) * 100vmin);
+    top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+ 
+.outer-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(145deg, var(--primary-pink), var(--primary-red));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+ 
+.inner-circle {
+    width: calc(var(--inner-circle-size-factor) / var(--outer-circle-size-factor) * 100%);
+    height: calc(var(--inner-circle-size-factor) / var(--outer-circle-size-factor) * 100%);
+    border-radius: 50%;
+    background-color: var(--body-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-text-color);
+    font-size: 2em;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+ 
+#phase-display {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    line-height: 1.3;
+}
+ 
+.phase-description {
+    font-size: 0.5em;
+    color: var(--darker-pink-heading);
+    margin-bottom: 15px;
+    padding: 0 10px;
+}
+ 
+.current-day-display {
+    font-size: 0.8em;
+    color: var(--dark-text-color);
+}
+ 
+.drag-handle {
+    --donut-width: calc((var(--outer-circle-size-factor) - var(--inner-circle-size-factor)) / 2 * 100vmin);
+    --handle-size: calc((var(--donut-width) - 10px) * 0.5); /* Förminskat med 50% */
+    width: var(--handle-size);
+    height: var(--handle-size);
+    background-color: var(--handle-color);
+    border-radius: 50%;
+    border: 3px solid var(--handle-border-color);
+    position: absolute;
+    cursor: grab;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+ 
+.track-line {
+    position: absolute;
+    --line-radius: calc(var(--inner-circle-size-factor) / 2 * 100vmin + ((var(--outer-circle-size-factor) - var(--inner-circle-size-factor)) / 4 * 100vmin));
+ 
+    width: calc(var(--line-radius) * 2);
+    height: calc(var(--line-radius) * 2);
+    border-radius: 50%;
+    border: var(--track-line-thickness) solid white; /* Vit linje */
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+ 
+.recommendations-container {
+    width: 70%;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+ 
+.recommendations-container h3 {
+    color: var(--darker-pink-heading);
+    margin-bottom: 20px;
+}
+ 
+.recommendation-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+ 
+.recommendation-item {
+    background-color: var(--rec-bg-color);
+    border: 2px solid var(--rec-border-color);
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    flex-grow: 1;
+    max-width: 30%;
+    box-sizing: border-box;
+}
+ 
+.recommendation-item h4 {
+    color: var(--rec-heading-color);
+    margin-top: 0;
+}
+ 
+.recommendation-item p {
+    color: var(--rec-text-color);
+    font-size: 0.95em;
+}
+ 
+/* Responsiv design för mindre skärmar */
+@media (max-width: 768px) {
+    .circle-container {
+        width: calc(var(--outer-circle-size-factor) * 90vmin);
+        height: calc(var(--outer-circle-size-factor) * 90vmin);
+    }
+ 
+    .recommendations-container {
+        width: 90%;
+        padding: 30px;
+    }
+ 
+    .recommendation-item {
+        max-width: 45%;
+    }
+}
+ 
+@media (max-width: 480px) {
+    .circle-container {
+        width: calc(var(--outer-circle-size-factor) * 95vmin);
+        height: calc(var(--outer-circle-size-factor) * 95vmin);
+    }
+ 
+    .inner-circle {
+        font-size: 1.5em;
+    }
+ 
+    #phase-display {
+        font-size: 1em;
+    }
+ 
+    .phase-description {
+        font-size: 0.6em;
+    }
+ 
+    .recommendation-item {
+        max-width: 100%;
+    }
 }
