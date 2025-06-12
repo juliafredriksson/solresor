@@ -1,58 +1,57 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soliga Resor</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M8WB8V42');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Träna med Menscykeln</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section class="hero">
-    <h2>Res dit solen skiner!</h2>
-    <p>Upptäck våra soliga paradis – boka din drömresa idag.</p>
-    <a href="#resor" class="cta-button">Utforska Resmål</a>
-  </section>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M8WB8V42"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <header class="main-header">
+  <h1>Träna efter din menscykel</h1>
+</header>
 
-  <section id="resor" class="cards-section">
-    <h2>Populära Resmål</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="hawaii.webp" alt="Maldiverna">
-        <h3>Maldiverna</h3>
-        <p>Drömlika öar och kristallklart vatten.</p>
-      </div>
-      <div class="card">
-        <img src="spanien.webp" alt="Spanien">
-        <h3>Spanien</h3>
-        <p>Sol, tapas och medelhavskultur.</p>
-      </div>
-      <div class="card">
-        <img src="grekland.webp" alt="Grekland">
-        <h3>Grekland</h3>
-        <p>Historiska öar och azurblå hav.</p>
-      </div>
+  <section class="cycle-settings">
+  <h2>Din cykelkalender</h2>
+  <form id="cycle-form">
+    <label for="start-date">Första mensdagen:</label>
+    <input type="date" id="start-date" required>
+
+    <label for="cycle-length">Cykellängd (dagar):</label>
+    <input type="number" id="cycle-length" value="28" min="21" max="35" required>
+
+    <button type="submit">Beräkna</button>
+  </form>
+</section>
+    <div class="circle-container">
+        <div class="outer-circle">
+            <div class="inner-circle">
+                <h2 id="phase-display">Välj din menscykelfas</h2>
+                <p id="phase-description" class="phase-description"></p>
+                <span id="current-day-display" class="current-day-display">Dag 1</span>
+            </div>
+            <div class="track-line"></div>
+            <div id="dragHandle" class="drag-handle"></div>
+        </div>
     </div>
-  </section>
-
-  <section id="erbjudanden">
-    <h2>Veckans Erbjudanden</h2>
-    <p>Just nu: 20% rabatt på resor till Medelhavet!</p>
-  </section>
-
-  <section id="kontakt">
-    <h2>Kontakta Oss</h2>
-    <form>
-      <input type="text" placeholder="Ditt namn" required>
-      <input type="email" placeholder="Din e-post" required>
-      <textarea placeholder="Ditt meddelande" rows="4" required></textarea>
-      <button type="submit">Skicka</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Soliga Resor AB</p>
-  </footer>
-
-  <script src="script.js"></script>
+ 
+    <div class="recommendations-container">
+        <h3>Träningsrekommendationer:</h3>
+        <div class="recommendation-list" id="recommendation-list">
+            </div>
+    </div>
+ 
+    <script src="script.js"></script>
 </body>
 </html>
